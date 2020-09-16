@@ -34,7 +34,7 @@ public class PhilosopherDeadLock  extends Thread {
         this.lbPhilosopher.setBorder(BorderFactory.createLineBorder(Color.black,5));
         try {
             Random rand = new Random();
-            int random_time = rand.nextInt(60);
+            int random_time = rand.nextInt(20);
             Thread.sleep(random_time);
         } catch (Exception e) {
         }
@@ -42,7 +42,7 @@ public class PhilosopherDeadLock  extends Thread {
     
     public void levantarChopstricks(){
         leftChopstick.levantar(this.lbLeftHand);
-        rightChopstcik.levantar(this.lbRightHand);
+        rightChopstcik.levantar(this.lbRightHand);  /// DeadLock : no puede pasar 
     }
     
     public void bajarChopsticks(){
@@ -56,7 +56,7 @@ public class PhilosopherDeadLock  extends Thread {
         this.lbPhilosopher.setBorder(BorderFactory.createLineBorder(Color.blue,5));
         try {
             Random rand = new Random();
-            int random_time = rand.nextInt(60);
+            int random_time = rand.nextInt(20);
             Thread.sleep(random_time);
         } catch (Exception e) {
         }

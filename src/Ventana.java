@@ -19,12 +19,12 @@ public class Ventana extends javax.swing.JFrame {
     public Ventana() {
         initComponents();
         
-        PhilosopherDeadLock [] philosophers = new PhilosopherDeadLock[5];
-        ChopstickDeadLock [] chopsticks = new ChopstickDeadLock[5];
+//        PhilosopherDeadLock [] philosophers = new PhilosopherDeadLock[5];
+//        ChopstickDeadLock [] chopsticks = new ChopstickDeadLock[5];
 
-//        PhilosopherMejorado [] philosophers = new PhilosopherMejorado[5];
-//        ChopstickMejorado [] chopsticks = new ChopstickMejorado[5];
-        
+        PhilosopherMejorado [] philosophers = new PhilosopherMejorado[5];
+        ChopstickMejorado [] chopsticks = new ChopstickMejorado[5];
+       
         
         JLabel [] lables_philosophers = new JLabel[5];
         JLabel [] labels_left_hands = new JLabel[5];
@@ -57,13 +57,13 @@ public class Ventana extends javax.swing.JFrame {
         labels_chopsticks[4] = lbChopstick5;
         
         for (int i = 0; i < labels_chopsticks.length; i++) {
-            chopsticks[i] = new ChopstickDeadLock(labels_chopsticks[0]);
+            chopsticks[i] = new ChopstickMejorado(labels_chopsticks[0]);
         }
         
-        philosophers[0] = new PhilosopherDeadLock(chopsticks[4], chopsticks[0],lables_philosophers[0],labels_left_hands[0],labels_right_hands[0]);
+        philosophers[0] = new PhilosopherMejorado(chopsticks[4], chopsticks[0],lables_philosophers[0],labels_left_hands[0],labels_right_hands[0]);
         
         for (int i = 1 ; i < philosophers.length; i++) {
-            philosophers[i] = new PhilosopherDeadLock(chopsticks[i-1], chopsticks[i],lables_philosophers[i],labels_left_hands[i],labels_right_hands[i]);
+            philosophers[i] = new PhilosopherMejorado(chopsticks[i-1], chopsticks[i],lables_philosophers[i],labels_left_hands[i],labels_right_hands[i]);
         }
         
         Solucion solucion = new Solucion(philosophers, chopsticks);
