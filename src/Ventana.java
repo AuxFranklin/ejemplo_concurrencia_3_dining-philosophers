@@ -57,7 +57,7 @@ public class Ventana extends javax.swing.JFrame {
         labels_chopsticks[4] = lbChopstick5;
         
         for (int i = 0; i < labels_chopsticks.length; i++) {
-            chopsticks[i] = new ChopstickMejorado(labels_chopsticks[0]);
+            chopsticks[i] = new ChopstickMejorado(labels_chopsticks[i]);
         }
         
         philosophers[0] = new PhilosopherMejorado(chopsticks[4], chopsticks[0],lables_philosophers[0],labels_left_hands[0],labels_right_hands[0]);
