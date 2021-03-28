@@ -45,7 +45,7 @@ public class PhilosopherMejorado extends PhilosopherDeadLock {
             Random rand = new Random();
             int random_time = rand.nextInt(30);
             
-            Thread.sleep(random_time);
+            Thread.sleep(random_time*50);
             
             bajarChopsticks();
             this.lbPhilosopher.setBorder(BorderFactory.createLineBorder(Color.black,5));

@@ -35,7 +35,7 @@ public class PhilosopherDeadLock  extends Thread {
         try {
             Random rand = new Random();
             int random_time = rand.nextInt(20);
-            Thread.sleep(random_time);
+            Thread.sleep(random_time*50);
         } catch (Exception e) {
         }
     }
@@ -57,7 +57,7 @@ public class PhilosopherDeadLock  extends Thread {
         try {
             Random rand = new Random();
             int random_time = rand.nextInt(20);
-            Thread.sleep(random_time);
+            Thread.sleep(random_time*50);
         } catch (Exception e) {
         }
         bajarChopsticks();
